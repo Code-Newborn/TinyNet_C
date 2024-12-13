@@ -143,13 +143,13 @@ int main() {
     const Tinn  tinn = xtbuild( nips, nhid, nops );
     for ( int i = 0; i < iterations; i++ ) {
         shuffle( data );
-        float error = 0.0f;
+        float loss = 0.0f;
         for ( int j = 0; j < data.rows; j++ ) {
             const float* const in = data.in[ j ];
             const float* const tg = data.tg[ j ];
-            error += xttrain( tinn, in, tg, rate );
+            loss += xttrain( tinn, in, tg, rate );
         }
-        printf( "error %.12f :: learning rate %f\n", ( double )error / data.rows, ( double )rate );
+        printf( "loss %.12f :: learning rate %f\n", ( double )loss / data.rows, ( double )rate );
         rate *= anneal;
     }
     // This is how you save the neural network to disk.
