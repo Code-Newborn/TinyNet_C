@@ -11,7 +11,7 @@
             "environment": [],
             "externalConsole": true, // 默认关闭 外部控制台运行
             "MIMode": "gdb",
-            "miDebuggerPath": "D:\\mingw64\\bin\\gdb.exe",
+            "miDebuggerPath": "D:\\Qt\\Qt5.14.2\\Tools\\mingw730_64\\bin\\gdb.exe", // 根据MinGW安装路径填写
             "setupCommands": [
                 {
                     "description": "为 gdb 启用整齐打印",
